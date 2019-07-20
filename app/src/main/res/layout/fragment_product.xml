@@ -96,12 +96,13 @@
     </LinearLayout>
 
     <Button
+        android:background="@drawable/custom_btn"
         android:layout_marginTop="@dimen/_10sdp"
         android:id="@+id/btnOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Order"
-        android:background="@drawable/custom_btn"
+
 
         />
 
