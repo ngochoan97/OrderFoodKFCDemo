@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp">
+<ImageView
+    android:id="@+id/imgProduct"
+    android:adjustViewBounds="true"
+    android:layout_width="@dimen/_40sdp"
+    android:layout_height="@dimen/_40sdp" />
+    <TextView
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="name product"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:id="@+id/tvCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="amount"
+        android:textSize="@dimen/_20sdp" />
+</LinearLayout>

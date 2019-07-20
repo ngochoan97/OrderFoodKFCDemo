@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlLayoutBack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFEB3B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+
+        <ImageButton
+
+            android:id="@+id/ibtnCart"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/ic_arrow_back_black_24dp"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_20sdp"
+            android:layout_toRightOf="@+id/ibtnCart"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="Your Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rlLayoutBack"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvListBuy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            app:layout_constraintTop_toBottomOf="@id/rlLayoutBack"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tvCartEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_175sdp"
+            android:text="Giỏ hàng trống"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llTotal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/rcvListBuy">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total : " />
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:textColor="#FF3737" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
